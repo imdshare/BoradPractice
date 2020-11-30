@@ -20,31 +20,24 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import lombok.Data;
 
-@EntityListeners(AuditingEntityListener.class)
-@Table(name="test_board")
+@Table(name="notice")
 @Data
 @Entity
-public class TestBoard {
+public class NoticeEntity {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long idx;
 	
-	@Column (nullable = false)
-	private String title;
-	
-	@Column(nullable = false)
-	private String content;
-	
-	@Column(nullable = false)
-	private String writer;
-	
-	@CreatedDate
-	@Column(updatable = false)
-	private LocalDateTime reg_date;
-	
-	@LastModifiedDate
-	private LocalDateTime edit_date;
+	@Column(name="title")
+	private String title ;
 
-
+	@Column(name="contents")
+	private String contents ;
+	
+	@Column(name="writer")
+	private String writer ;
+	
+	@Column(name="reg_Dt")
+	private String regDt ;
 }

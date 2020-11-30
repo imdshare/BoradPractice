@@ -10,12 +10,12 @@
 <h1>상세목록 테스트</h1>
 
 <ul>
-<li>${detail.title}</li>
-<li>${detail.content}</li>
+<li>${list.title}</li>
+<li>${list.contents}</li>
 </ul>
 
-<a href="/update/${detail.idx}">수정</a>
-<a href="/delete/${detail.idx}">삭제</a>
+<a href="/update/${list.idx}">수정</a> <!-- 내가 적은 모델의 변수 -->
+<a href="/delete/${list.idx}">삭제</a>
 
 </body>
 </html>

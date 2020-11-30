@@ -3,11 +3,14 @@ package SpringPractice.dao;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
-import SpringPractice.entity.TestBoard;
+import SpringPractice.entity.NoticeEntity;
 
-public interface TestDao extends JpaRepository<TestBoard, Long> {
+
+
+
+public interface NoticeDao extends JpaRepository<NoticeEntity, Long> {
 
 	@Query
-	TestBoard findByIdx(Long idx);
+	NoticeEntity findByIdx(Long idx);
 
 }

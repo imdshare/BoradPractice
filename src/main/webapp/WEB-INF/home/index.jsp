@@ -12,7 +12,7 @@
 </head>
 <body>
 <h1>Test Home</h1>
-<a href="/test/write.do">글쓰기</a>
+<a href="/write.do">글쓰기</a>
 
 <ul>
 	<li>번호</li>
@@ -23,16 +23,16 @@
 </ul>
 
 
-<c:forEach var="test" items="${list}" varStatus="status" begin="0" end="10" step="1" >
+<c:forEach var="dao" items="${list}" varStatus="status" begin="0" end="10" step="1" >
 	<ul>
 		<li>${status.index+1 }</li>
-		<li><a href="/test/${test.idx}">${test.title }</a></li>
-		<li>${test.writer }</li>
-		<li>${fn:substring(test.reg_date,0,10) }</li>
-		<li>${fn:substring(test.edit_date,0,10) }</li>
+		<li><a href="/detail/${dao.idx}">${dao.title}</a></li>
+		<li>${dao.writer}</li>
+		<li>${fn:substring(dao.regDt,0,10) }</li>
+<%-- 		<li>${fn:substring(dao.edit_date,0,10) }</li> --%>
 	</ul>
 </c:forEach>
 
-
+ 
 </body>
 </html>
